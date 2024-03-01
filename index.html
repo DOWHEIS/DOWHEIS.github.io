@@ -1,102 +1,119 @@
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="styles.css">
-<div class="container">
-    <div class="header">
-        <div class="full-name">
-            <span class="first-name">Drew</span>
-            <span class="last-name">Heiss</span>
-        </div>
-        <div class="contact-info">
-            <span class="email">Email: </span>
-            <span class="email-val">drewdheiss@gmail.com</span>
-            <span class="separator"></span>
-            <span class="phone">Phone: </span>
-            <span class="phone-val">812-629-7074</span>
-        </div>
-
-        <div class="about">
-            <span class="position">Fullstack Developer</span>
-            <span class="desc">
-        I am a fullstack developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
-      </span>
-        </div>
-    </div>
-    <div class="details">
-        <div class="section">
-            <div class="section__title">Experience</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">Ball State Digital Corps</div>
-                        <div class="addr">Muncie, IN</div>
-                        <div class="duration">Aug 2021 - Present</div>
-                    </div>
-                    <div class="right">
-                        <div class="name">Master Developer</div>
-                        <div class="desc">Worked together with interdisciplinary teams doing fullstack development</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="section__title">Education</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">Ball State University</div>
-                        <div class="addr">San Fr, CA</div>
-                        <div class="duration">Aug 2020 - May 2024</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="section">
-            <div class="section__title">Projects at Ball State Computer Science</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="name">CS 222 Project</div>
-                    <div class="text">Worked with a team to make WorldSearch an interactive map that would give relevant country information. It was made using Java.</div>
-                </div>
-
-                <div class="section__list-item">
-                    <div class="name">Multi-tier Web Architecture Project</div>
-                    <div class="text">Worked with a team to recreate a bus tracker application used on campus. This was made using .net.</div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="section__title">Skills</div>
-            <div class="skills">
-                <div class="skills__item">
-                    <div class="left">
-                        <div class="name">
-                            Typescript/Javascript
-                        </div>
-                    </div>
-                </div>
-                <div class="skills__item">
-                    <div class="left">
-                        <div class="name">
-                            CSS/SCSS
-                        </div>
-                    </div>
-                </div>
-                <div class="skills__item">
-                    <div class="left">
-                        <div class="name">
-                            React
-                        </div>
-                    </div>
-                </div>
-                <div class="skills__item">
-                    <div class="left">
-                        <div class="name">
-                            AWS CDK
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML 5 Boilerplate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+  <p class="name-plate">Drew Heiss</p>
+  <div class="contact">
+    <p>github.com/DOWHEIS</p>
+    <p>drewdheiss@gmail.com</p>
+    <p>812-629-7074</p>
+  </div>
 </div>
+<div class="section">
+  <p class="section-header">Education</p>
+  <p class="section-header">Bachelor's of Science - Computer Science</p>
+  <p class="section-text">Ball State University • Muncie, IN</p>
+  <p class="section-text">05/2024</p>
+</div>
+<div class="section">
+  <p class="section-header">Experience</p>
+  <p class="inner-section-header">Digital Corps</p>
+  <div class="bullet-section">
+    <p class="bullet-title">Developer • 06/2021 - 05/2024</p>
+    <ul>
+      <li>Coordinated with a large multidisciplinary staff dedicated to building projects for the Ball State colleges and various external customers.</li>
+      <li>Mentored new hires and facilitate a safe and inclusive learning/growing environment.</li>
+      <li>Practiced industry standards such as proper git flow and agile development.</li>
+      <li>Effectively communicated technical information to non-technical team members in a clear and concise manner.</li>
+    </ul>
+  </div>
+</div>
+<div class="section">
+  <p class="section-header">Projects</p>
+  <div class="bullet-section">
+    <p class="inner-section-header">Subscription Manager - .Net, Typescript, Vue.js, and Vitest</p>
+    <p class="bullet-title">Subscription Management System for Moneytree Software</p>
+    <ul>
+      <li>Communicated with our client in order to provide timely responses and schedule meetings.</li>
+      <li>Was involved heavily in the backend architecture for interacting with Moneytrees subscription services.</li>
+      <li>Lead the development of the frontend architecture for multiple webapps.</li>
+      <li>Developed three webapps using Vue.js and Typescript that simplified Moneytrees subscription management user experience.</li>
+    </ul>
+  </div>
+  <div class="bullet-section">
+    <p class="inner-section-header">Flocktalk - Typescript, React, Adonis.js, MySQL, and AWS S3</p>
+    <p class="bullet-title">Podcast Hosting Platform for Ball State University</p>
+    <ul>
+      <li>Developed a backend service that handled user auth through Ball State SSO, formatted RSS feeds, and allowed users to host their own podcast to be synced with Apple Podcasts and Spotify.</li>
+      <li>Built the frontend using React Typescript with JWT authorization and S3 Uploading of podcast content.</li>
+      <li>Built S3/Api Gateway services using the AWS CDK to upload and correctly format podcast content to match Apple Podcasts image size requirements.</li>
+    </ul>
+  </div>
+  <div class="bullet-section">
+    <p class="inner-section-header">DCHQ - Typescript, React, Adonis.js, MySQL, and Zapier</p>
+    <p class="bullet-title">Digital Corps project management system</p>
+    <ul>
+      <li>Developed an internal solution to standardize project organization and workflow.</li>
+      <li>Built a backend service that handled data syncing across DCHQ, Slack, ClickUp, Github, and Outlook with Zapier integrations.</li>
+      <li>Collaborated with a team of developers, designers, and project managers to build the frontend and backend.</li>
+    </ul>
+  </div>
+</div>
+<div class="section">
+  <p class="section-header">Skills</p>
+  <p class="section-text">React, Vue.js, Typescript, Javascript, HTML, CSS, SQL, C#, .Net, AWS CDK, Adonis.js, Figma</p>
+</div>
+<script src="index.js"></script>
+</body>
+
+<style>
+  *{
+    margin: 0.3rem;
+  }
+  .header {
+    border-left: 3px solid black;
+    padding-left: 34px;
+  }
+  p.name-plate {
+    font-size: 20pt;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+  .contact p {
+    margin: 0;
+    font-size: 10pt;
+  }
+  p.section-header {
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+  p.section-text {
+    margin: 5px 0px;
+  }
+  .section {
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+  li{
+    font-size: 10pt;
+  }
+  p.inner-section-header {
+    font-weight: 700;
+  }
+  ul{
+    padding-bottom: 5px;
+  }
+  p.bullet-title{
+    font-size: 10pt;
+    font-style: italic;
+  }
+</style>
+</html>
