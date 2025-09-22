@@ -1,131 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Drew Heiss - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="header">
   <p class="name-plate">Drew Heiss</p>
   <div class="contact">
-    <p>github.com/DOWHEIS</p>
-    <p>https://drewbert.baby/</p>
-    <p>drewdheiss@gmail.com</p>
-    <p>812-629-7074</p>
+    <p><a href="https://github.com/DOWHEIS">github.com/DOWHEIS</a></p>
+    <p><a href="https://drewbert.baby/">drewbert.baby</a></p>
+    <p><a href="mailto:drewdheiss@gmail.com">drewdheiss@gmail.com</a></p>
+    <p><a href="tel:+18126297074">812-629-7074</a></p>
   </div>
 </div>
+
+<div class="section">
+  <p class="section-header">Summary</p>
+  <p class="section-text">
+    Full stack and cloud engineer building web apps, integrations, and applied ML on AWS/GCP. React/Vue; TypeScript/Python APIs; AWS CDK (TypeScript); real time and event pipelines; ML with human in the loop (YOLOX, DocAI).
+  </p>
+</div>
+
+<div class="section">
+  <p class="section-header">Experience</p>
+
+  <p class="inner-section-header">Ball State University — Digital Corps</p>
+  <div class="bullet-section">
+    <p class="bullet-title">Staff Developer 12/2024</p>
+    <ul>
+      <li>Lead student developers in a digital agency model; mentor student devs and coordinate with UX, design, comm, and PM.</li>
+      <li>Design and ship cloud native architectures with AWS CDK (TypeScript).</li>
+      <li>Bring AI into production web apps: computer vision services, document parsers, and chat experiences with human in the loop review.</li>
+      <li>Drive cost aware design: serverless first, right sizing, VPC endpoints to curb NAT spend, custom metrics and dashboards.</li>
+    </ul>
+  </div>
+
+  <p class="inner-section-header">Accutech Systems Corporation</p>
+  <div class="bullet-section">
+    <p class="bullet-title">Software Developer I • 06/2024 – 12/2024</p>
+    <ul>
+      <li>Migrated a legacy .NET frontend to Vue.js + TypeScript; implemented backend features and performance critical SQL.</li>
+      <li>Delivered in Agile cycles with client validated increments.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-header">Projects</p>
+
+  <div class="bullet-section">
+    <p class="inner-section-header">Real Time Bus Tracker — AWS CDK, API Gateway (WebSocket/HTTP), Lambda, Redis, Timestream</p>
+    <p class="bullet-title">Campus Bus platform</p>
+    <ul>
+      <li>Replaced a $150k/year vendor with a serverless system running under $500/month.</li>
+      <li>Real time pipeline from webhook GPS to WebSocket broadcast; ~300ms average processing and end to end fan out.</li>
+      <li>Handles thousands of GPS events per hour; stress tested up to 5,000 concurrent connections.</li>
+      <li>Driver iPad UI and React admin for routes, stops, and events; Timestream and S3 prepared for ML ETAs and analytics.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-section">
+    <p class="inner-section-header">Object Detection Service — YOLOX on ONNX Runtime (Python), ECS Fargate (CPU), S3, API Gateway, Oracle</p>
+    <p class="bullet-title">Occupancy counting for dining lines and parking</p>
+    <ul>
+      <li>Centralized inference on CPU only Fargate; privacy first process and delete with only counts stored.</li>
+      <li>Integrates with existing security cameras that upload frames to S3 on a schedule; supports high object counts per frame.</li>
+      <li>Polygon detection zones per camera and multi camera aggregation per location to handle varied angles.</li>
+      <li>Admin portal with SSR templates on Lambda; Oracle access via VPC peering and tight security groups.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-section">
+    <p class="inner-section-header">Document Parsing Pipeline — GCP Document AI (custom), BigQuery, Vertex AI, Workflows/Eventarc, Terraform</p>
+    <p class="bullet-title">Digitization of hand filled employer surveys</p>
+    <ul>
+      <li>Custom trained extractor for mixed layouts: checkboxes, tables, circled options, and free text; current F1 ~80% with ongoing improvement.</li>
+      <li>Human in the loop verification in browser; approved records land in BigQuery and feed back into training.</li>
+      <li>Vertex AI Conversational Agents on approved data for conversational insight; Excel export for analysis; batch orchestration with Workflows.</li>
+    </ul>
+  </div>
+
+  <div class="bullet-section">
+    <p class="inner-section-header">API Builder SDK — TypeScript, Zod, AWS CDK, HMR Dev Server, RDS Data API</p>
+    <p class="bullet-title">Config driven scaffolding of production AWS APIs</p>
+    <ul>
+      <li>Single config generates CDK stacks (routes, Lambdas, IAM, throttling, optional DB and SSO/API key auth).</li>
+      <li>Local dev server with hot reload that emulates API Gateway events; Docker Postgres and raw SQL migrations.</li>
+      <li>Custom dependency bundler that hoists local/private packages and rewrites imports to keep Lambdas portable and lean.</li>
+      <li>Per API database creation via RDS Data API custom resource; secrets in Secrets Manager; built for student teams.</li>
+    </ul>
+  </div>
+</div>
+
 <div class="section">
   <p class="section-header">Education</p>
-  <p class="inner-section-header">Bachelor's of Science - Computer Science</p>
+  <p class="inner-section-header">Bachelor of Science — Computer Science</p>
   <p class="section-text">Ball State University • Muncie, IN</p>
   <p class="bullet-title">05/2024</p>
 </div>
-<div class="section">
-  <p class="section-header">Experience</p>
-  <p class="inner-section-header">Digital Corps</p>
-  <div class="bullet-section">
-    <p class="bullet-title">Developer • 08/2021 - 05/2024</p>
-    <ul>
-      <li>Coordinated with a large multidisciplinary staff dedicated to building projects for the Ball State colleges and various external customers.</li>
-      <li>Mentored new hires and facilitate a safe and inclusive learning/growing environment.</li>
-      <li>Practiced industry standards such as proper git flow and agile development.</li>
-      <li>Effectively communicated technical information to non-technical team members in a clear and concise manner.</li>
-    </ul>
-  </div>
-  <p class="inner-section-header">Accutech Systems Corporation</p>
-  <div class="bullet-section">
-    <p class="bullet-title">Software Developer 1 • 06/2024 - present</p>
-    <ul>
-      <li>Worked with .Net, Typescript, and Vue.js.</li>
-      <li>Migrated a legacy .Net frontend to a modern Vue.js typescript frontend.</li>
-      <li>Engaged in AGILE development methodology through client validated work going through many rounds of requirement gathering, development, and testing.</li>
-      <li>Developed and maintained software functionalities to read files, store and retrieve data from our database through complex stored procedures, and facilitate data export to clients with an emphasis on precision, accuracy, and performance.</li>
-    </ul>
-  </div>
-</div>
-<div class="section">
-  <p class="section-header">Projects</p>
-  <div class="bullet-section">
-    <p class="inner-section-header">Subscription Manager - .Net, Typescript, Vue.js, and Vitest</p>
-    <p class="bullet-title">Subscription Management System for Moneytree Software</p>
-    <ul>
-      <li>Communicated with our client in order to provide timely responses and schedule meetings.</li>
-      <li>Was involved heavily in the backend architecture for interacting with Moneytrees subscription services.</li>
-      <li>Lead the development of the frontend architecture for multiple webapps.</li>
-      <li>Developed three webapps using Vue.js and Typescript that simplified Moneytrees subscription management user experience.</li>
-    </ul>
-  </div>
-  <div class="bullet-section">
-    <p class="inner-section-header">DCHQ - Typescript, React, Adonis.js, MySQL, and Zapier</p>
-    <p class="bullet-title">Digital Corps project management system</p>
-    <ul>
-      <li>Developed an internal solution to standardize project organization and workflow.</li>
-      <li>Built a backend service that handled data syncing across DCHQ, Slack, ClickUp, Github, and Outlook with Zapier integrations.</li>
-      <li>Collaborated with a team of developers, designers, and project managers to build the frontend and backend.</li>
-    </ul>
-  </div>
-</div>
+
 <div class="section">
   <p class="section-header">Skills</p>
-  <p class="section-text">React, Vue.js, Typescript, Javascript, HTML, CSS, SQL, C#, .Net, AWS CDK, Adonis.js, Figma, Dialogflow CX</p>
+  <ul class="skills-list">
+    <li><strong>Cloud and infra:</strong> AWS (CDK TypeScript, Lambda, API Gateway HTTP/WebSocket, ECS Fargate, S3, CloudWatch, IAM, RDS Data API), GCP (Document AI, Vertex AI, BigQuery, Workflows, Eventarc, Terraform)</li>
+    <li><strong>Backend:</strong> TypeScript/Node.js, Python/FastAPI, C#/.NET, SQL, REST/WebSocket APIs, AdonisJS</li>
+    <li><strong>Frontend:</strong> React, Vue</li>
+    <li><strong>Data stores:</strong> Redis, Timestream, Postgres/Aurora, Oracle</li>
+    <li><strong>Applied ML:</strong> YOLOX (ONNX Runtime), GCP Document AI, Vertex AI</li>
+  </ul>
 </div>
+
 <div class="section">
   <p class="section-header">Awards</p>
   <p class="bullet-title">Midwest Association for Student Employment Administrators (MASEA)</p>
   <ul>
-    <li>Regional Runner Up, Technology and Innovation Category</li>
+    <li>Regional Runner Up, Technology and Innovation</li>
   </ul>
   <p class="bullet-title">Ball State University</p>
   <ul>
     <li>2024 Undergraduate Student Employee of the Year</li>
   </ul>
 </div>
+
 </body>
 
 <style>
-  *{
-    margin: 0.3rem;
-  }
-  .header {
-    border-left: 3px solid black;
-    padding-left: 34px;
-  }
-  p.name-plate {
-    font-size: 20pt;
-    font-weight: 800;
-    margin-bottom: 5px;
-  }
-  .contact p {
-    margin: 0;
-    font-size: 10pt;
-  }
-  p.section-header {
-    font-weight: 600;
-    padding-bottom: 5px;
-  }
-  p.section-text {
-    margin: 5px;
-  }
-  .section {
-    border-top: 1px solid black;
-    margin-top: 5px;
-    padding-top: 5px;
-  }
-  li{
-    font-size: 10pt;
-  }
-  p.inner-section-header {
-    font-weight: 700;
-  }
-  ul{
-    padding-bottom: 5px;
-  }
-  p.bullet-title{
-    font-size: 10pt;
-    font-style: italic;
-  }
+  * { margin: 0.3rem; }
+  .header { border-left: 3px solid black; padding-left: 34px; }
+  p.name-plate { font-size: 20pt; font-weight: 800; margin-bottom: 5px; }
+  .contact p { margin: 0; font-size: 10pt; }
+  .contact a { color: inherit; text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  p.section-header { font-weight: 600; padding-bottom: 5px; }
+  p.section-text { margin: 5px; }
+  .section { border-top: 1px solid black; margin-top: 5px; padding-top: 5px; }
+  li { font-size: 10pt; }
+  .skills-list { margin: 5px 20px; }
+  .skills-list li { margin: 0.1rem 0; }
+  p.inner-section-header { font-weight: 700; }
+  ul { padding-bottom: 5px; }
+  p.bullet-title { font-size: 10pt; font-style: italic; }
 </style>
 </html>
